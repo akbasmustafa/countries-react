@@ -42,7 +42,7 @@ function Main({ goToPage }) {
 
   return (
     <div className="App container">
-      <div className="row justify-content-start">
+      <div className="row justify-content-start m-3">
         <div className="col col-md-6 rounded">
           <input
             type="search"

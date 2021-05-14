@@ -7,7 +7,6 @@ function App() {
   const [selectedCountry, setSelectedCountry] = useState(null);
 
   function handlePageNavigation(pageName, param) {
-    console.log(param);
     setSelectedCountry(param);
     setPage(pageName);
   }

@@ -1,16 +1,17 @@
 import React from "react";
+import CardDetail from "../component/CardDetail";
 
-function Info({ country,  goToPage }) {
+function Info({ country, goToPage }) {
   return (
     <div>
       <button
         type="button"
-        class="btn btn-secondary"
+        class="btn btn-light m-3"
         onClick={() => goToPage("main")}
       >
-        Back to Main
+        +Back
       </button>
-      <h4>{country.name}</h4>
+      <CardDetail country={country} goToPage={goToPage} />
     </div>
   );
 }
