@@ -1,10 +1,16 @@
 import React from "react";
 
-function Info({ goToPage }) {
+function Info({ country,  goToPage }) {
   return (
     <div>
-      <button onClick={() => goToPage("main")}>Back to Main</button>
-      <h4>Info Page</h4>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        onClick={() => goToPage("main")}
+      >
+        Back to Main
+      </button>
+      <h4>{country.name}</h4>
     </div>
   );
 }

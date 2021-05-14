@@ -4,16 +4,22 @@ import Info from "./pages/Info";
 
 function App() {
   const [page, setPage] = useState("main");
+  const [selectedCountry, setSelectedCountry] = useState(null);
 
-  function handlePageNavigation(pageName) {
+  function handlePageNavigation(pageName, param) {
+    console.log(param);
+    setSelectedCountry(param);
     setPage(pageName);
   }
   return (
     <>
       {page === "main" ? (
-        <Main goToPage={handlePageNavigation} />
+        <Main
+          goToPage={handlePageNavigation}
+          selectCountry={(country) => selectedCountry(country)}
+        />
       ) : page === "info" ? (
-        <Info goToPage={handlePageNavigation} />
+        <Info goToPage={handlePageNavigation} country={selectedCountry} />
       ) : (
         "No Page"
       )}

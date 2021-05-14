@@ -71,7 +71,13 @@ function Main({ goToPage }) {
       </div>
       <div className="mainContainer row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
         {countriesAll.filter(searchFilter).map((country, index) => {
-          return <Card key={index} country={country} onclick={()=>goToPage("info")} />;
+          return (
+            <Card
+              key={index}
+              country={country}
+              onclick={() => goToPage("info", country)}
+            />
+          );
         })}
       </div>
     </div>
