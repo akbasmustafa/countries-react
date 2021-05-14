@@ -1,9 +1,9 @@
 import React from "react";
 import "../App.css";
 
-function Card({ country }) {
+function Card({ country, onclick }) {
   return (
-    <div className="col">
+    <div className="col" onClick={() => onclick()}>
       <div className="card h-100">
         <img className="cardImage card-img-top" src={country.flag} alt="flag" />
         <div className="cardText card-body">
